@@ -1,5 +1,20 @@
 <header>
-<div id="headerInner">
-  <p id="#"><%= link_to "HOME", :controller => "welcome", :action => "index" %></p>
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <!-- ここはのちにいい感じのロゴを作成して差し替える -->
+      <span class="navbar-brand">宮崎ゼミ18th</span>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Top', :controller => "welcome", :action => "index" %></li>
+        <!-- 以下のliはeachを使ってのちに修正 -->
+        <li><%= link_to 'Notes' %></li>
+        <li><%= link_to 'Pics' %></li>
+        <li><%= link_to 'Projects' %></li>
+        <li><%= link_to 'Biographies' %></li>
+      </ul>
+    </div>
+  </div>
 </div>
 </header>
