@@ -1,0 +1,13 @@
+<h1>Notes#New</h1>
+<!-- ここらへんに議事録を記述するフォームを -->
+<h2 class="text-center">議事録の追加</h2>
+<%= form_for @note do |f| %>
+  <h3 class="text-center"><%= f.text_field :title %></h3>
+  <p class="text-center"><%= f.text_area :content, rows: 10, cols: 20 %></p>
+  <p class="text-center"><%= f.text_field :written_by %></p>
+  <%= f.submit %>
+<% end %>
+
+
+
+<!-- 後でclass="text-center"とかレイアウトを整える -->

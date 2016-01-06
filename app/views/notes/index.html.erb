@@ -1,8 +1,12 @@
 <h1>for now it's test!</h1>
 <!-- 上記のh1タグがheaderにより隠されてしまっている -->
+<%= link_to '新しい記事を書く', :action => 'new' %>
 <h2 class="text-center">議事録一覧</h2>
 <% @notes.each do |note| %>
-  <h3><%= note.title %></h3>
-  <p><%= note.written_by %></p>
+  <article>
+    <!-- 議事録のidに対応したshowアクションの呼び出し -->
+    <%= link_to note.title, :action => 'show', :id => note.id %>
+    <p><%= note.written_by %></p>
+  </article>
 <% end %>
 
