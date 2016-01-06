@@ -1,6 +1,17 @@
 class NotesController < ApplicationController
   def index
     @notes = Note.all
-    @note = Note.find(2)
+  end
+
+  def new
+  end
+
+  def show
+    id = params[:id]
+  end
+
+  def update
+
+    redirect_to :action => "index"
   end
 end

@@ -1,3 +1,8 @@
 <h1>for now it's test!</h1>
-<%= markdown @note.title %>
-<%= markdown @note.content %>
+<!-- 上記のh1タグがheaderにより隠されてしまっている -->
+<h2 class="text-center">議事録一覧</h2>
+<% @notes.each do |note| %>
+  <h3><%= note.title %></h3>
+  <p><%= note.written_by %></p>
+<% end %>
+
